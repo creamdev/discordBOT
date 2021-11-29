@@ -35,37 +35,37 @@ client.on('message', msg => {
     else if (msg.content.toLowerCase() === 'usd' || msg.content === 'dolar') {
         axios.get(usdApi).then(response => {
             var satis = response.data.data.TRY;
-            msg.reply(`1 ${response.data.query.base_currency} = ` +satis + " TL " + " ŞAHLANIYORUZ OSMANLININ AYAK SESLERİ!")
+            msg.reply(`1 ${response.data.query.base_currency} = ` + satis.toFixed(2) + " TL " + " ŞAHLANIYORUZ OSMANLININ AYAK SESLERİ!")
         })
     }
     else if (msg.content.toLowerCase() === 'euro' ) {
         axios.get(eurApi).then(response => {
             var satis = response.data.data.TRY;
-            msg.reply(`1 ${response.data.query.base_currency} = ` +satis + " TRY " + " Almanya bizi kıskanıyor.") 
+            msg.reply(`1 ${response.data.query.base_currency} = ` +satis.toFixed(2) + " TRY " + " Almanya bizi kıskanıyor.") 
         }) 
     }
     else if (msg.content.toLowerCase() === 'sterlin') {
         axios.get(gbpApi).then(response => {
             var satis = response.data.data.TRY;
-            msg.reply(`1 ${response.data.query.base_currency} = ` +satis + " TRY " + "ezanlarımızı susturamayacaksınız.Milletimizi bölemeyeceksiniz.")
+            msg.reply(`1 ${response.data.query.base_currency} = ` +satis.toFixed(2) + " TRY " + "ezanlarımızı susturamayacaksınız.Milletimizi bölemeyeceksiniz.")
         })
     }
     else if (msg.content.toLowerCase() === 'yen') {
         axios.get(jpyApi).then(response => {
             var satis = response.data.data.TRY;
-            msg.reply(`1 ${response.data.query.base_currency} = ` +satis + " TRY " + "ezanlarımızı susturamayacaksınız.Milletimizi bölemeyeceksiniz.")
+            msg.reply(`1 ${response.data.query.base_currency} = ` +satis.toFixed(2) + " TRY " + "ezanlarımızı susturamayacaksınız.Milletimizi bölemeyeceksiniz.")
         })
     }
     else if (msg.content.toLowerCase() === 'btc') {
         axios.get(btcApi).then(response => {
             var satis = response.data.data.TRY;
-            msg.reply(`1 ${response.data.query.base_currency} = ` +satis + " TRY " + " BTC Balon kardeşim sakın ha gireyim deme")
+            msg.reply(`1 ${response.data.query.base_currency} = ` +satis.toFixed(2) + " TRY " + " BTC Balon kardeşim sakın ha gireyim deme")
         })
     }
     else if (msg.content.toLowerCase() === 'eth') {
         axios.get(ethApi).then(response => {
             var satis = response.data.data.TRY;
-            msg.reply(`1 ${response.data.query.base_currency} = ` +satis + " TRY " + " Mining bitiyor.Ekran kartları hep ellerinde patlıcak kardeşim")
+            msg.reply(`1 ${response.data.query.base_currency} = ` +satis.toFixed(2)+ " TRY " + " Mining bitiyor.Ekran kartları hep ellerinde patlıcak kardeşim")
         })
     }
     else if (msg.content.toLowerCase() == '!clear') {
