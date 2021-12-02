@@ -25,10 +25,15 @@ client.on('message', msg => {
             {id:"1",message:"Eyi eyi eskiden biz Yağ tüp guyruğuna girerdik yeğenim sen bilmen o günleri"},
             {id:"2",message:"Herkesin 5 evi 5 arabası var. Benim yok ama eyi eyi ekonomi"},
             {id:"3",message:"Millet iş beğenmiyor yeğenim ekonomi çok iyi"},
-            {id:"4",message:"SEN FEDÖCÜMÜSÜN SEN FEDOCÜSÜNNN "}
+            {id:"4",message:"SEN FEDÖCÜMÜSÜN SEN FEDOCÜSÜNNN "},
+            {id:"5",message:"VERGİNİ ÖDÜYOSUNN !!!"},
+            {id:"6",message:"TELEFUNUNU ÇIKART"},
+            {id:"7",message:"VATAN HAİNİ KÜRTAJ YAPİYE BURDA VALLA 155İ ARARIN"},
+            {id:"8",message:"HERŞEY ÇOK PAHALI AMA REİSİMİZ BAŞIMIZDAN EKSİK OLMASIN"},,
+            {id:"9",message:"Dolar 15 lira 20 lira olucak diye topladılar dolar 12 liraya düştü şimdi kara kara düşünüyorlar."}
         ]
 
-        let messageService = ekonomiMessage.find(item =>item.id==  Math.floor(Math.random()*(4-1))+1)
+        let messageService = ekonomiMessage.find(item =>item.id==  Math.floor(Math.random()*(9)+1))
 
         msg.reply(messageService.message)
     }
