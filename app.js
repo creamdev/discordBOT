@@ -33,7 +33,7 @@ client.on('message', msg => {
             {id:"9",message:"Dolar 15 lira 20 lira olucak diye topladılar dolar 12 liraya düştü şimdi kara kara düşünüyorlar."}
         ]
 
-        let messageService = ekonomiMessage.find(item =>item.id==  Math.floor(Math.random()*(9)+1))
+        let messageService = ekonomiMessage.find(item =>item.id==  Math.floor(Math.random()*(10-1)+1))
 
         msg.reply(messageService.message)
     }
