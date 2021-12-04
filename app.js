@@ -22,20 +22,20 @@ client.on('message', msg => {
     }
     else if ( msg.content.toLowerCase() === "ekonomi nasıl"){
         let ekonomiMessage = [
-            {id:"1",message:"Eyi eyi eskiden biz Yağ tüp guyruğuna girerdik yeğenim sen bilmen o günleri"},
-            {id:"2",message:"Herkesin 5 evi 5 arabası var. Benim yok ama eyi eyi ekonomi"},
-            {id:"3",message:"Millet iş beğenmiyor yeğenim ekonomi çok iyi"},
-            {id:"4",message:"SEN FEDÖCÜMÜSÜN SEN FEDOCÜSÜNNN "},
-            {id:"5",message:"VERGİNİ ÖDÜYOSUNN !!!"},
-            {id:"6",message:"TELEFUNUNU ÇIKART"},
-            {id:"7",message:"VATAN HAİNİ KÜRTAJ YAPİYE BURDA VALLA 155İ ARARIN"},
-            {id:"8",message:"HERŞEY ÇOK PAHALI AMA REİSİMİZ BAŞIMIZDAN EKSİK OLMASIN"},,
-            {id:"9",message:"Dolar 15 lira 20 lira olucak diye topladılar dolar 12 liraya düştü şimdi kara kara düşünüyorlar."}
+            "Eyi eyi eskiden biz Yağ tüp guyruğuna girerdik yeğenim sen bilmen o günleri",
+            "Herkesin 5 evi 5 arabası var. Benim yok ama eyi eyi ekonomi",
+            "Millet iş beğenmiyor yeğenim ekonomi çok iyi",
+            "SEN FEDÖCÜMÜSÜN SEN FEDOCÜSÜNNN ",
+            "VERGİNİ ÖDÜYOSUNN !!!",
+            "TELEFUNUNU ÇIKART",
+            "VATAN HAİNİ KÜRTAJ YAPİYE BURDA VALLA 155İ ARARIN",
+            "HERŞEY ÇOK PAHALI AMA REİSİMİZ BAŞIMIZDAN EKSİK OLMASIN",
+            "Dolar 15 lira 20 lira olucak diye topladılar dolar 12 liraya düştü şimdi kara kara düşünüyorlar."
         ]
 
-        let messageService = ekonomiMessage.find(item =>item.id==  Math.floor(Math.random()*(10-1)+1))
+        let messageService = ekonomiMessage[Math.floor(Math.random()*ekonomiMessage.length)] 
 
-        msg.reply(messageService.message)
+        msg.reply(messageService)
     }
     else if (msg.content.toLowerCase() === 'usd' || msg.content === 'dolar') {
         axios.get(usdApi).then(response => {
